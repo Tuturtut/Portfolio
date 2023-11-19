@@ -4,9 +4,12 @@ import ProjetctCard from './component/ProjectCard';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1 className="text-3xl font-bold underline">Simonin Arthur</h1>
-      </header>
+
+
+      <body>
+        <h1 className="Title">ARTHUR SIMONIN</h1>
+        <h1 className="Project">Projects</h1>
+      </body>
     </div>
   );
 }
