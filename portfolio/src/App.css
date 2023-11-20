@@ -1,0 +1,74 @@
+body,
+html,
+#root {
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+    font-family: Franie Test;
+}
+
+body {
+    background: black;
+}
+
+.Title {
+
+    font-size: 6.25rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+    max-width: 10rem;
+    color: #000;
+    -webkit-text-stroke: 1px #E4DFD9;
+}
+
+.Project {
+    color: #E4DFD9;
+    font-family: Franie Test;
+    font-size: 6.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 32.5rem;
+}
+
+.arrows-right {
+    display: flex;
+    justify-content: left;
+}
+
+.arrows-left {
+    display: flex;
+    justify-content: right;
+}
+
+.arrow {
+    border: solid #E4DFD9;
+    border-width: 0 20px 20px 0;
+    display: inline-block;
+    padding: 2rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.line {}
+
+.App {
+    background: red;
+    overflow: hidden;
+    min-height: 100vh;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
