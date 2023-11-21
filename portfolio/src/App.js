@@ -1,25 +1,28 @@
 import './App.css';
 function App() {
-  const arrowNumber = 15; // Remplace avec le nombre souhaité
+  const arrowNumber = 5; // Remplace avec le nombre souhaité
 
 
   return (
     <div className="App">
       <body>
         <h1 className="Title">ARTHUR SIMONIN</h1>
-        <h1 className="Project">Projects</h1>
-        <div className="arrows-right">
-          {getArrows(arrowNumber, "right")}
-        </div>
-        <div className="line">
-          <hr />
-        </div>
-        <div className="arrows-left">
-          {getArrows(arrowNumber, "left")}
+        <h1 className="ProjectTitle">Projects</h1>
+        <div className="ProjectDecoration">
+          <div className="arrows-right">
+            {getArrows(arrowNumber, "right")}
+          </div>
+          <hr className="line" />
         </div>
 
+        <div className="projects"></div>
 
-
+        <div className="ProjectDecoration">
+          <hr className="line" />
+          <div className="arrows-left">
+            {getArrows(arrowNumber, "left")}
+          </div>
+        </div>
       </body>
     </div>
   );
