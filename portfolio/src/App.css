@@ -9,6 +9,22 @@ html,
     --arrows_spacing: 2rem;
 }
 
+body {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+html {
+    background-color: red;
+}
+
+.App {
+    background: rgb(0, 0, 0);
+    overflow: hidden;
+    min-height: 100vh;
+
+}
+
 h1 {
     font-family: Franie Test;
 }
@@ -19,11 +35,11 @@ body {
 
 .Title {
 
-    font-size: 6.25rem;
+    font-size: 7vw;
     font-style: italic;
     font-weight: 700;
     line-height: normal;
-    max-width: 10rem;
+    max-width: 10vw;
     color: #000;
     -webkit-text-stroke: 1px #E4DFD9;
 }
@@ -31,32 +47,10 @@ body {
 .ProjectTitle {
     color: #E4DFD9;
     font-family: Franie Test;
-    font-size: 6.25rem;
+    font-size: 6.25vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    width: 32.5rem;
-}
-
-.arrows-right {
-    display: flex;
-    justify-content: left;
-    margin-right: var(--arrows_spacing);
-}
-
-.arrows-left {
-    display: flex;
-    justify-content: right;
-    margin-left: var(--arrows_spacing);
-}
-
-.arrow {
-    border: solid #E4DFD9;
-    border-width: 0 1.2rem 1.2rem 0;
-    display: inline-block;
-    padding: 2rem;
-    margin-left: -1rem;
-    margin-right: -1rem;
 }
 
 /* TODO:  retravailler la responsive des fleches*/
@@ -70,11 +64,6 @@ body {
     padding-bottom: 1rem;
 }
 
-.right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-}
-
 .projects {
     display: flex;
     flex-direction: column;
@@ -85,22 +74,19 @@ body {
     background-color: green;
 }
 
+.arrow {
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
 .left {
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+
 }
 
 .line {
-    width: 50%;
-    max-width: 50%;
+    flex-grow: 1;
     margin-right: 1rem;
     margin-left: 1rem;
-}
-
-.App {
-    background: red;
-    overflow: hidden;
-    min-height: 100vh;
-    padding-left: 4rem;
-    padding-right: 4rem;
 }
