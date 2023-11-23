@@ -2,23 +2,22 @@ import './App.css';
 import { useEffect, useState } from 'react';
 function App() {
   const [arrowNumber, setArrowNumber] = useState(0);
-  const [arrowSize, setArrowSize] = useState(Math.round(window.innerWidth / 20)); // Ajoutez cette ligne
   const [spaceBetweenArrows, setSpaceBetweenArrows] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
       let innerWidth = window.innerWidth;
-      // Ajuster le nombre de flèches en fonction de la largeur de l'écran
-      setArrowNumber(Math.round(innerWidth / 400) + 3);
 
-      // Ajuster la taille de chaque flèche en fonction de la largeur de l'écran
-      setArrowSize(Math.round(innerWidth / 14));
+      let arrowNumber = 15;
 
+
+
+
+      setArrowNumber(arrowNumber);
+      setSpaceBetweenArrows(arrowNumber * -1.75)
       // Ajuster l'espace entre les flèches en fonction de la largeur de l'écran
+      // let spacing = -Math.round(innerWidth / 5000) - 0.3;
 
-      let value = -Math.round(innerWidth / 1000);
-      console.log(value);
-      setSpaceBetweenArrows(value);
 
     };
 
@@ -39,7 +38,7 @@ function App() {
       <h1 className="ProjectTitle">Projects</h1>
       <div className="ProjectDecoration">
         <div className="arrows-right">
-          {getArrows(arrowNumber, "right", arrowSize, spaceBetweenArrows)}
+          {getArrows(arrowNumber, "right", spaceBetweenArrows)}
         </div>
         <hr className="line" />
       </div>
@@ -49,7 +48,7 @@ function App() {
       <div className="ProjectDecoration">
         <hr className="line" />
         <div className="arrows-left">
-          {getArrows(arrowNumber, "left", arrowSize, spaceBetweenArrows)}
+          {getArrows(arrowNumber, "left", spaceBetweenArrows)}
         </div>
       </div>
 
@@ -58,22 +57,22 @@ function App() {
   );
 }
 
-function getArrows(number, direction, size, space) {
+function getArrows(number, direction, space) {
 
   const fleches = [];
   console.log("espacement etre les fleches : " + space)
+
   for (let i = 0; i < number; i++) {
+
     fleches.push(<svg
       key={i}
       className={`arrow ${direction}`}
-      width={size}
-      height={size}
       viewBox="0 0 86 87"
       fill="none"
       style={
         {
-          marginRight: space + "rem",
-          marginLeft: space + "rem",
+          marginRight: space / number + "vw",
+          marginLeft: space / number + "vw",
         }
       }
     >

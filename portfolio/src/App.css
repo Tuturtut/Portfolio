@@ -2,40 +2,37 @@ body,
 html,
 #root {
     height: 100%;
-    margin: 0;
 }
 
 :root {
-    --arrows_spacing: 2rem;
+    --arrows_spacing: 2vw;
+    --titlesSize: calc(10px + 5.5vw)
 }
 
 body {
-    margin-left: 4rem;
-    margin-right: 4rem;
+    background-color: red;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    position: relative;
+    z-index: -1;
 }
 
-html {
-    background-color: red;
-}
 
 .App {
     background: rgb(0, 0, 0);
     overflow: hidden;
-    min-height: 100vh;
+    padding: 1vw;
 
 }
 
 h1 {
     font-family: Franie Test;
-}
-
-body {
-    background: black;
+    margin: 0vw;
 }
 
 .Title {
 
-    font-size: 7vw;
+    font-size: calc(10px + 6vw);
     font-style: italic;
     font-weight: 700;
     line-height: normal;
@@ -47,7 +44,7 @@ body {
 .ProjectTitle {
     color: #E4DFD9;
     font-family: Franie Test;
-    font-size: 6.25vw;
+    font-size: var(--titlesSize);
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -59,24 +56,36 @@ body {
     display: flex;
     align-items: center;
     background-color: blue;
-    justify-content: space-between;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    justify-content: center;
+    /* Centrer les flèches */
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+
 }
 
 .projects {
     display: flex;
     flex-direction: column;
+    height: 20vw;
+    min-width: 100px;
+    min-height: 100px;
 
-    padding: 5rem;
     border: solid #E4DFD9;
     border-width: 1px;
     background-color: green;
 }
 
 .arrow {
-    margin-left: -1rem;
-    margin-right: -1rem;
+    width: 6.25vw;
+    height: 6.25vw;
+}
+
+.arrows-right {
+    margin-right: 2vw;
+}
+
+.arrows-left {
+    margin-left: 2vw;
 }
 
 .left {
@@ -87,6 +96,6 @@ body {
 
 .line {
     flex-grow: 1;
-    margin-right: 1rem;
-    margin-left: 1rem;
+    margin-right: 1vw;
+    margin-left: 1vw;
 }
