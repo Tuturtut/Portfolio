@@ -109,14 +109,39 @@ h1 {
 
 /* Elements se superposant */
 .skills {
-    flex-grow: 2;
     background-color: purple;
-    display: grid;
-
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(11, 1fr);
-
+    margin: 0;
+    padding: 0;
 }
+
+table{
+    margin: 0;
+    padding: 0;
+}
+thead{
+    margin: 0;
+    padding: 0;
+}
+
+tbody{
+    margin: 0;
+    padding: 0;
+}
+
+th{
+    border: 1px solid #E4DFD9;
+    border-bottom: 0;
+    margin: 10vw;
+    padding: 0;
+}
+
+tr{
+    border: 1px solid #E4DFD9;
+    margin: 10vw;
+    padding: 0;
+}
+
+
 
 .skills_mySelf {
     flex-grow: 1;
@@ -124,7 +149,7 @@ h1 {
     display: flex;
 }
 
-.skillsTitle {
+.skills-title {
     color: #E4DFD9;
     text-align: justify;
     font-family: Franie Test;
@@ -132,6 +157,31 @@ h1 {
     font-style: italic;
     font-weight: 700;
     line-height: normal;
-    grid-column: 1 / 4;
-    grid-row: 1;
+}
+
+h2{
+    margin: 0;
+}
+
+.programming-language-subtitle{
+    color: #000;
+    font-family: Franie Test;
+    font-size: 3.125vw;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+    text-align: justify;
+    width: 47.875rem;
+    -webkit-text-stroke: 1px #E4DFD9;
+
+}
+
+.svg-container {
+    width: 6vw;
+    height: 6vw;
+}
+
+svg {
+    width: 98%;
+    height: 98%;
 }
