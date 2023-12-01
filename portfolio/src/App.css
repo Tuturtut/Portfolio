@@ -30,6 +30,14 @@ h1 {
     margin: 0vw;
 }
 
+p{
+    font-family: Franie Test;
+    font-weight: 100;
+    color: #E4DFD9;
+
+
+}
+
 .Title {
 
     font-size: calc(10px + 6vw);
@@ -102,18 +110,41 @@ h1 {
 
 .skills_mySelf {
     display: flex;
-
-    margin-top: 1vw;
-}
-
-/* Elements se superposant */
-.skills {
-    margin: 0;
-    padding: 0;
-}
-
-svg {
+    align-items: center;
+  }
+  
+  /* Section Skills */
+  .skills {
+    flex: 4;
+  }
+  
+  /* Section Myself */
+  .mySelf {
+    flex: 1;
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+  
+  /* Vos styles pour les titres et les paragraphes peuvent rester inchangés */
+  
+  .mySelfTitle {
+    color: #E4DFD9;
+    font-size: 10vw;
+  }
+  
+  .MyselfTitleContainer {
+    margin-bottom: 8vw;
+  }
+  
+  .mySelfParagraph {
+    width: auto;
+    font-size: 1.2vw;
+  }
+  
+  /* Autres styles pour svg, si nécessaire */
+  svg {
     max-width: calc(100% + 20px);
     height: 100%;
     margin-right: -1vw;
-}
+  }
+
