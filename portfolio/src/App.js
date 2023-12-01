@@ -65,6 +65,7 @@ function App() {
         <hr className="line" />
       </div>
 
+{/* Revoir le responsive */}
       <div className="projects"></div>
 
       <div className="ProjectDecoration">
@@ -180,6 +181,7 @@ function App() {
     </defs>
           </svg>
         </div>
+        {/* Faire le responsive quand myself est dessous skills */}
         <div className="mySelf">
           {getDecorativeTitleByNumber(3, "Myself", 7, "#fff", 9)}
           <div className='mySelfParagraph'>
