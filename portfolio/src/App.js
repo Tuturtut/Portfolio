@@ -186,7 +186,7 @@ function App() {
         </div>
         {/*TODO: Faire le responsive quand myself est dessous skills */}
         <div className="mySelf">
-          {getDecorativeTitleByNumber(3, "Myself", 7, "#fff", 8, myselfTextSize, centerItem)}
+          {getDecorativeTitleByNumber(3, "Myself", 7, "#E4DFD9", 8, myselfTextSize, centerItem)}
           <div className='mySelfParagraph'>
             <p style={{
               fontSize: myselfTextSize * 1.3 + "vw"
@@ -204,32 +204,40 @@ function App() {
           </div>
 
           <div className='contactDetails footerDiv'>
-            <div className='mailDetails details'>
-              <svg className='contactDetailsSvg' width="75" height="76" viewBox="0 0 75 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="37.5" cy="38" r="37.5" fill="#D9D9D9" />
-                <path d="M37.9719 42.2122L62.6692 23.6234V22.5439C62.6692 21.4297 61.7658 20.5264 60.6517 20.5264H15.2922C14.178 20.5264 13.2747 21.4297 13.2747 22.5439V23.6234L37.9719 42.2122Z" fill="black" />
-                <path d="M39.2919 46.7149C38.9011 47.009 38.4362 47.1561 37.9719 47.1561C37.5076 47.1561 37.0428 47.009 36.652 46.7149L13.2747 29.1189V54.4001C13.2747 55.5142 14.178 56.4176 15.2922 56.4176H60.6517C61.7658 56.4176 62.6692 55.5142 62.6692 54.4001V29.1189L39.2919 46.7149Z" fill="black" />
-              </svg>
-              <hr className='detailsLines' />
-              <p><a href="mailto: arthursimonin88@gmail+portfolio.com">arthursimonin88@gmail.com</a></p>
+            <div>
+              <a className='mailDetails details' href="mailto: arthursimonin88+portfolio@gmail.com">
+                <svg className='contactDetailsSvg' width="75" height="76" viewBox="0 0 75 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="37.5" cy="38" r="37.5" fill="#D9D9D9" />
+                  <path d="M37.9719 42.2122L62.6692 23.6234V22.5439C62.6692 21.4297 61.7658 20.5264 60.6517 20.5264H15.2922C14.178 20.5264 13.2747 21.4297 13.2747 22.5439V23.6234L37.9719 42.2122Z" fill="black" />
+                  <path d="M39.2919 46.7149C38.9011 47.009 38.4362 47.1561 37.9719 47.1561C37.5076 47.1561 37.0428 47.009 36.652 46.7149L13.2747 29.1189V54.4001C13.2747 55.5142 14.178 56.4176 15.2922 56.4176H60.6517C61.7658 56.4176 62.6692 55.5142 62.6692 54.4001V29.1189L39.2919 46.7149Z" fill="black" />
+                </svg>
+                <hr className='detailsLines' />
+                <p>arthursimonin88@gmail.com</p>
+              </a>
             </div>
 
-            <div className='discordDetails details'>
+            <div>
+              <a className="githubDetails details" href="https://github.com/Tuturtut" target="_blank">
 
+                <svg className='contactDetailsSvg' width="75" height="76" viewBox="0 0 75 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="37.5" cy="38" r="37.5" fill="black" />
+                  <g clip-path="url(#clip0_90_46)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M37.3883 0.5C16.7135 0.5 0 17.6875 0 38.9508C0 55.9477 10.7089 70.3352 25.5651 75.4273C27.4224 75.8102 28.1028 74.6 28.1028 73.582C28.1028 72.6906 28.0416 69.6351 28.0416 66.4516C17.6411 68.7437 15.4753 61.868 15.4753 61.868C13.8038 57.4117 11.3273 56.2664 11.3273 56.2664C7.92321 53.9109 11.5753 53.9109 11.5753 53.9109C15.3513 54.1656 17.3327 57.8578 17.3327 57.8578C20.6747 63.7141 26.0602 62.0594 28.2268 61.0406C28.536 58.5578 29.527 56.8391 30.5793 55.8844C22.2842 54.993 13.5566 51.6828 13.5566 36.9133C13.5566 32.7117 15.0413 29.2742 17.3939 26.6008C17.0227 25.6461 15.7224 21.6984 17.7658 16.4148C17.7658 16.4148 20.9227 15.3961 28.0408 20.3617C31.0883 19.52 34.2312 19.0919 37.3883 19.0883C40.5452 19.0883 43.7633 19.5344 46.735 20.3617C53.8538 15.3961 57.0107 16.4148 57.0107 16.4148C59.0541 21.6984 57.7531 25.6461 57.3819 26.6008C59.7964 29.2742 61.2199 32.7117 61.2199 36.9133C61.2199 51.6828 52.4923 54.9289 44.1352 55.8844C45.4974 57.0937 46.673 59.3852 46.673 63.0141C46.673 68.1703 46.6117 72.3086 46.6117 73.5812C46.6117 74.6 47.2929 75.8102 49.1495 75.4281C64.0056 70.3344 74.7145 55.9477 74.7145 38.9508C74.7758 17.6875 58.001 0.5 37.3883 0.5Z" fill="#E4DFD9" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_90_46">
+                      <rect width="75" height="75" fill="white" transform="translate(0 0.5)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <hr className='detailsLines' />
+                <p>Tuturtut</p>
+              </a>
 
-              <svg className='contactDetailsSvg' width="75" height="76" viewBox="0 0 75 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="37.5" cy="38" r="37.5" fill="black" />
-                <g clip-path="url(#clip0_90_46)">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M37.3883 0.5C16.7135 0.5 0 17.6875 0 38.9508C0 55.9477 10.7089 70.3352 25.5651 75.4273C27.4224 75.8102 28.1028 74.6 28.1028 73.582C28.1028 72.6906 28.0416 69.6351 28.0416 66.4516C17.6411 68.7437 15.4753 61.868 15.4753 61.868C13.8038 57.4117 11.3273 56.2664 11.3273 56.2664C7.92321 53.9109 11.5753 53.9109 11.5753 53.9109C15.3513 54.1656 17.3327 57.8578 17.3327 57.8578C20.6747 63.7141 26.0602 62.0594 28.2268 61.0406C28.536 58.5578 29.527 56.8391 30.5793 55.8844C22.2842 54.993 13.5566 51.6828 13.5566 36.9133C13.5566 32.7117 15.0413 29.2742 17.3939 26.6008C17.0227 25.6461 15.7224 21.6984 17.7658 16.4148C17.7658 16.4148 20.9227 15.3961 28.0408 20.3617C31.0883 19.52 34.2312 19.0919 37.3883 19.0883C40.5452 19.0883 43.7633 19.5344 46.735 20.3617C53.8538 15.3961 57.0107 16.4148 57.0107 16.4148C59.0541 21.6984 57.7531 25.6461 57.3819 26.6008C59.7964 29.2742 61.2199 32.7117 61.2199 36.9133C61.2199 51.6828 52.4923 54.9289 44.1352 55.8844C45.4974 57.0937 46.673 59.3852 46.673 63.0141C46.673 68.1703 46.6117 72.3086 46.6117 73.5812C46.6117 74.6 47.2929 75.8102 49.1495 75.4281C64.0056 70.3344 74.7145 55.9477 74.7145 38.9508C74.7758 17.6875 58.001 0.5 37.3883 0.5Z" fill="#E4DFD9" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_90_46">
-                    <rect width="75" height="75" fill="white" transform="translate(0 0.5)" />
-                  </clipPath>
-                </defs>
-              </svg>
-              <hr className='detailsLines' />
-              <p><a href="https://github.com/Tuturtut" target="_blank">Tuturtut</a></p>
+            </div>
+            <div>
+              <a className='linkedinDetails details' href="" target="_blank"></a>
+
 
             </div>
           </div>

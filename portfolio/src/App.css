@@ -170,29 +170,17 @@ p {
 }
 
 .details {
-    display: inline;
-    font-size: 2vw;
     display: flex;
     align-items: center;
+    font-size: 2vw;
 }
-
 
 .detailsLines {
     flex: 1;
-    /* Fait en sorte que la ligne s'étende pour occuper l'espace disponible */
     height: 0;
-    /* Cache la ligne par défaut, car elle est maintenant gérée par le SVG */
     border: none;
-    /* Supprime le style de la ligne par défaut */
     border-top: 1px solid #E4DFD9;
-    /* Ajoute une bordure en haut pour simuler la ligne */
     margin: 0 10px;
-    /* Espace entre le SVG et la ligne */
-}
-
-hr {
-    width: auto;
-    height: 2px;
 }
 
 .contactDetailsSvg {
@@ -202,7 +190,6 @@ hr {
 .footerDiv {
     border: 2px solid #E4DFD9;
     border-radius: 10px;
-    height: 200px;
     padding: 2vw;
 }
 
