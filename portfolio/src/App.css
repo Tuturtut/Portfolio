@@ -38,7 +38,7 @@ p{
 
 }
 
-.Title {
+.title {
 
     font-size: calc(10px + 6vw);
     font-style: italic;
@@ -48,6 +48,12 @@ p{
     color: #000;
     -webkit-text-stroke: 1px #E4DFD9;
 }
+
+.titleDiv{
+    display: flex;
+
+}
+
 
 .ProjectTitle {
     color: #E4DFD9;
@@ -110,41 +116,38 @@ p{
 
 .skills_mySelf {
     display: flex;
-    align-items: center;
-  }
+}
   
   /* Section Skills */
   .skills {
-    flex: 4;
+    flex: 3;
+    margin-right: -2vw;
+    margin-bottom: 4vw;
   }
   
   /* Section Myself */
   .mySelf {
-    flex: 1;
-    margin-left: 1vw;
+    flex: 2;
+    /* margin-left: 5vw; */
     margin-right: 1vw;
   }
   
-  /* Vos styles pour les titres et les paragraphes peuvent rester inchangés */
   
   .mySelfTitle {
     color: #E4DFD9;
     font-size: 10vw;
   }
   
-  .MyselfTitleContainer {
-    margin-bottom: 8vw;
-  }
-  
   .mySelfParagraph {
     width: auto;
-    font-size: 1.2vw;
+    text-align: justify;
+    margin-left: 2vw;
+    margin-right: 2vw;
   }
   
   /* Autres styles pour svg, si nécessaire */
   svg {
-    max-width: calc(100% + 20px);
+    width: 100%;
     height: 100%;
-    margin-right: -1vw;
   }
 

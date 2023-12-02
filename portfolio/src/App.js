@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react';
 function App() {
   const [arrowNumber, setArrowNumber] = useState(15);
   const [spaceBetweenArrows, setSpaceBetweenArrows] = useState(-26.25);
-  const [svgSize, setSvgSize] = useState((5 * window.innerWidth) / 9);
-  const [strokeWidth, setStrokeWidth] = useState(2);
   const [skillsMySelfFlexDirection, setSkillsMyselfFlexDirection] = useState("row");
+  const [myselfTextSize, setMyselfTextSize] = useState(1);
+  const [centerItem, isItemCentered] = useState(false);
 
   useEffect(() => {
 
@@ -17,36 +17,30 @@ function App() {
       let height = window.innerHeight;
       let ratio = width / height;
 
-      console.log(ratio);
 
 
       setArrowNumber(arrowNumber);
-      setSpaceBetweenArrows(arrowNumber * -1.75)
+      setSpaceBetweenArrows(arrowNumber * -1.75);
       // Ajuster l'espace entre les flèches en fonction de la largeur de l'écran
       // let spacing = -Math.round(innerWidth / 5000) - 0.3;
-      if (ratio > 1)
+      if (ratio > 1){
         setSkillsMyselfFlexDirection("row");
-      else setSkillsMyselfFlexDirection("column");
-
-
-      if (width < 450) {
-        setStrokeWidth(1);
+        setMyselfTextSize("center");
+        setMyselfTextSize(1);
+        isItemCentered(false);
+      } else {
+        setSkillsMyselfFlexDirection("column");
+        setMyselfTextSize("none");
+        setMyselfTextSize(2);
+        isItemCentered(true);
       }
-      else {
-        setStrokeWidth(2);
-      }
-
-
     };
 
-    // Écouter les changements de taille d'écran
     window.addEventListener('resize', handleResize);
 
 
-    // Lancer la détection de changement de taille d'écran
     handleResize();
 
-    // Désabonner l'écouteur lors du démontage du composant
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -55,8 +49,13 @@ function App() {
 
   return (
     <div className="App">
-
-      <h1 className="Title">ARTHUR SIMONIN</h1>
+      <div className='titleDiv'
+      style={{
+        alignItems: centerItem ? "center" : "left"
+        
+      }}>
+        <h1 className='title'>ARTHUR SIMONIN</h1>
+      </div>
       <h1 className="ProjectTitle">Projects</h1>
       <div className="ProjectDecoration">
         <div className="arrows-right">
@@ -65,7 +64,7 @@ function App() {
         <hr className="line" />
       </div>
 
-{/* Revoir le responsive */}
+{/*TODO: Revoir le responsive */}
       <div className="projects"></div>
 
       <div className="ProjectDecoration">
@@ -181,14 +180,16 @@ function App() {
     </defs>
           </svg>
         </div>
-        {/* Faire le responsive quand myself est dessous skills */}
+        {/*TODO: Faire le responsive quand myself est dessous skills */}
         <div className="mySelf">
-          {getDecorativeTitleByNumber(3, "Myself", 7, "#fff", 9)}
+          {getDecorativeTitleByNumber(3, "Myself", 7, "#fff", 8, myselfTextSize, centerItem)}
           <div className='mySelfParagraph'>
-            <p>
+            <p style={{
+              fontSize: myselfTextSize * 1.3 + "vw"
+            }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam, eros eget bibendum consectetur, nulla nulla cursus urna, id euismod ante risus quis justo. Donec finibus risus nisl, vel tincidunt ipsum aliquam sed. Aliquam ultrices porttitor libero, id tristique lectus. Aliquam ac finibus tortor, quis bibendum felis. Morbi ut magna non mauris ultrices placerat. Curabitur sollicitudin tempus sapien a finibus. Sed scelerisque accumsan vehicula. Ut malesuada mi quis placerat placerat. Nullam vel ipsum libero. Ut venenatis non urna non scelerisque.
 
-            Nam velit erat, dictum eget felis non, pharetra mattis nibh. Nullam at mollis urna, rutrum ornare tellus. Vivamus congue efficitur posuere. Mauris aliquet erat eu ullamcorper suscipit. Duis eu magna at diam eleifend blandit in sit amet diam. Proin sed dapibus arcu. In tempor lectus quis tortor varius, in lobortis mauris hendrerit. Curabitur tincidunt lacus risus, sed pharetra tortor rutrum et. Nulla fringilla, purus non viverra accumsan, metus nunc volutpat purus, at hendrerit nibh dui quis lorem. Duis pharetra odio purus, sit amet lobortis neque lacinia vel. Vivamus vel pellentesque orci. Quisque finibus accumsan dui, eget dapibus lacus hendrerit volutpat. Aenean ultrices consectetur auctor. Morbi sit amet maximus leo, hendrerit faucibus enim. Phasellus auctor, nibh ut convallis pellentesque, dolor dui aliquet nunc, vel cursus augue enim ut justo.
+           
 
 
             </p>
@@ -205,9 +206,13 @@ function App() {
 
 }
 
-function getDecorativeTitleByNumber(number, title, spacing, color, fontSize){
+function getDecorativeTitleByNumber(number, title, spacing, color, fontSize, multiplicator, centerItem){
+  console.log(centerItem);
   const titles = [];
   let style = {};
+
+  spacing = spacing * multiplicator;
+  fontSize = fontSize * multiplicator;
 
   for (let i= 0; i < number; i++){
     if(i != number - 1){
@@ -225,10 +230,15 @@ function getDecorativeTitleByNumber(number, title, spacing, color, fontSize){
       <h1
       className={title + "Title"}
       style={style}
-      >{title}</h1>
+      >{title}
+      </h1>
     )
   }
-  return <div className={title + "TitleContainer"}>{titles}</div>
+  return <div className={title + "TitleContainer"} style={{
+      marginBottom: 8 * multiplicator + "vw",
+      textAlign: "center",
+      margin: "auto"
+  }}>{titles}</div>
 }
 
 function getArrows(number, direction, space) {
