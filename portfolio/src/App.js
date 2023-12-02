@@ -184,7 +184,7 @@ function App() {
             </defs>
           </svg>
         </div>
-        {/*TODO: Faire le responsive quand myself est dessous skills */}
+
         <div className="mySelf">
           {getDecorativeTitleByNumber(3, "Myself", 7, "#E4DFD9", 8, myselfTextSize, centerItem)}
           <div className='mySelfParagraph'>
@@ -192,18 +192,43 @@ function App() {
               fontSize: myselfTextSize * 1.3 + "vw"
             }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam, eros eget bibendum consectetur, nulla nulla cursus urna, id euismod ante risus quis justo. Donec finibus risus nisl, vel tincidunt ipsum aliquam sed. Aliquam ultrices porttitor libero, id tristique lectus. Aliquam ac finibus tortor, quis bibendum felis. Morbi ut magna non mauris ultrices placerat. Curabitur sollicitudin tempus sapien a finibus. Sed scelerisque accumsan vehicula. Ut malesuada mi quis placerat placerat. Nullam vel ipsum libero. Ut venenatis non urna non scelerisque.
+              bibendum felis. Morbi ut magna non mauris ultrices placerat. Curabitur sollicitudin tempus sapien a finibus. Sed scelerisque accumsan vehicula. Ut malesuada mi quis placerat placerat. Nullam vel ipsum libero. Ut venenatis non urna non scelerisque.
+
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also
             </p>
           </div>
         </div>
       </div>
 
+      {/*TODO: Remplir le footer */}
       <footer>
-        <div className='footer'>
-          <div className='languageSelector footerDiv'>
+        <div className='footer'
+          style={{
+
+            flexDirection: centerItem ? 'column' : 'row',
+          }}>
+          <div className='languageSelector footerDiv'
+            style={{
+              marginRight: centerItem ? '0' : '1vw',
+              marginBottom: centerItem ? '2vw' : '0'
+            }}>
+
+            <p style={{
+              fontSize: centerItem ? '2.5vw' : '1.5vw',
+              paddingLeft: centerItem ? '8vw' : 0,
+              paddingRight: centerItem ? '8vw' : 0
+            }}>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+            </p>
 
           </div>
 
-          <div className='contactDetails footerDiv'>
+          <div className='contactDetails footerDiv'
+            style={{
+              marginLeft: centerItem ? '0' : '1vw'
+            }}>
             <div>
               <a className='mailDetails details' href="mailto: arthursimonin88+portfolio@gmail.com">
                 <svg className='contactDetailsSvg' width="75" height="76" viewBox="0 0 75 76" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -236,7 +261,24 @@ function App() {
 
             </div>
             <div>
-              <a className='linkedinDetails details' href="" target="_blank"></a>
+              <a className='linkedinDetails details' href="https://www.linkedin.com/in/arthur-simonin-592164243/" target="_blank">
+                <svg className="contactDetailsSvg" width="75" height="76" viewBox="0 0 75 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M75 38C75 58.7107 58.2107 75.5 37.5 75.5C16.7893 75.5 0 58.7107 0 38C0 17.2893 16.7893 0.5 37.5 0.5C58.2107 0.5 75 17.2893 75 38Z" fill="#D9D9D9" />
+                  <g clip-path="url(#clip0_99_94)">
+                    <rect width="75" height="75" transform="translate(0 0.5)" fill="black" />
+                    <path d="M37.5 0.5C16.7906 0.5 0 17.2906 0 38C0 58.7094 16.7906 75.5 37.5 75.5C58.2094 75.5 75 58.7094 75 38C75 17.2906 58.2094 0.5 37.5 0.5ZM31.25 50.5H25V31.75H31.25V50.5ZM28.125 28.9656C26.2281 28.9656 24.6875 27.4156 24.6875 25.5C24.6875 23.5875 26.225 22.0344 28.125 22.0344C30.025 22.0344 31.5625 23.5875 31.5625 25.5C31.5625 27.4156 30.0219 28.9656 28.125 28.9656ZM53.125 50.5H46.8812V41.5594C46.8812 35.6813 40.625 36.1781 40.625 41.5594V50.5H34.375V31.75H40.625V35.1656C43.35 30.1156 53.125 29.7406 53.125 40.0031V50.5Z" fill="#E4DFD9" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_99_94">
+                      <rect width="75" height="75" fill="white" transform="translate(0 0.5)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <hr className='detailsLines' />
+                <p>Arthur</p>
+
+              </a>
 
 
             </div>
