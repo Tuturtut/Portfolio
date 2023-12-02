@@ -202,6 +202,20 @@ function App() {
         </div>
       </div>
 
+      <div className='contact'
+        style={{
+          marginBottom: "3vw"
+        }}>
+
+
+        {getDecorativeTitleByNumber(9, "CONTACT", 3.5, "#E4DFD9", 10, 1, false, "alternate")}
+        <div style={{
+          border: "solid #E4DFD9 1px"
+        }}>
+
+        </div>
+      </div>
+
       {/*TODO: Remplir le footer */}
       <footer>
         <div className='footer'
@@ -242,7 +256,7 @@ function App() {
             </div>
 
             <div>
-              <a className="githubDetails details" href="https://github.com/Tuturtut" target="_blank">
+              <a className="githubDetails details" href="https://github.com/Tuturtut" target="_blank" rel="noopener noreferrer">
 
                 <svg className='contactDetailsSvg' width="75" height="76" viewBox="0 0 75 76" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="37.5" cy="38" r="37.5" fill="black" />
@@ -261,7 +275,7 @@ function App() {
 
             </div>
             <div>
-              <a className='linkedinDetails details' href="https://www.linkedin.com/in/arthur-simonin-592164243/" target="_blank">
+              <a className='linkedinDetails details' href="https://www.linkedin.com/in/arthur-simonin-592164243/" target="_blank" rel="noopener noreferrer">
                 <svg className="contactDetailsSvg" width="75" height="76" viewBox="0 0 75 76" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M75 38C75 58.7107 58.2107 75.5 37.5 75.5C16.7893 75.5 0 58.7107 0 38C0 17.2893 16.7893 0.5 37.5 0.5C58.2107 0.5 75 17.2893 75 38Z" fill="#D9D9D9" />
                   <g clip-path="url(#clip0_99_94)">
@@ -296,7 +310,7 @@ function App() {
 
 }
 
-function getDecorativeTitleByNumber(number, title, spacing, color, fontSize, multiplicator, centerItem) {
+function getDecorativeTitleByNumber(number, title, spacing, color, fontSize, multiplicator, centerItem, patern) {
   console.log(centerItem);
   const titles = [];
   let style = {};
@@ -307,19 +321,36 @@ function getDecorativeTitleByNumber(number, title, spacing, color, fontSize, mul
   fontSize = fontSize * multiplicator;
 
   for (let i = 0; i < number; i++) {
-    if (i !== number - 1) {
-      style = {
-        marginBottom: -spacing + "vw",
-        color: "#000",
-        fontSize: fontSize + "vw",
-        WebkitTextStroke: "1px " + color
+    if (patern === "alternate") {
+      if (i % 2 === 1) {
+        style = {
+          marginBottom: -spacing + "vw",
+          color: "#000",
+          fontSize: fontSize + "vw",
+          WebkitTextStroke: "1px " + color
+        }
+      } else if (i % 2 === 0) {
+        style = {
+          marginBottom: -spacing + "vw",
+          color: color,
+          fontSize: fontSize + "vw"
+        }
       }
     } else {
+      if (i !== number - 1) {
+        style = {
+          marginBottom: -spacing + "vw",
+          color: "#000",
+          fontSize: fontSize + "vw",
+          WebkitTextStroke: "1px " + color
+        }
+      } else {
 
-      style = {
-        marginBottom: -spacing / 4 + "vw",
-        color: color,
-        fontSize: fontSize + "vw"
+        style = {
+          marginBottom: -spacing / 4 + "vw",
+          color: color,
+          fontSize: fontSize + "vw"
+        }
       }
     }
     titles.push(
