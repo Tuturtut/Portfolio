@@ -207,8 +207,11 @@ function App() {
           marginBottom: "3vw"
         }}>
 
+        <h1 className='contactTitle'>Contact</h1>
 
-        {getDecorativeTitleByNumber(9, "CONTACT", 3.5, "#E4DFD9", 10, 1, false, "alternate")}
+        <div className='contactDecorativeTitle'>
+          {getDecorativeTitleByNumber(9, "CONTACT", 3.5, "#E4DFD9", 10, 1, false, "alternate")}
+        </div>
         <div style={{
           border: "solid #E4DFD9 1px"
         }}>

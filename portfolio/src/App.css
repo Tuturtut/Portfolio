@@ -22,7 +22,7 @@ body {
     background: rgb(0, 0, 0);
     overflow: hidden;
     padding: 1vw;
-
+    z-index: -2;
 }
 
 h1 {
@@ -143,6 +143,35 @@ p {
 
 p {
     text-align: justify;
+}
+
+.contact {
+    display: flex;
+
+    height: 20vw;
+    min-width: 100px;
+    min-height: 100px;
+    background-color: transparent;
+
+
+}
+
+.contactTitle {
+    color: #E4DFD9;
+    font-size: 7vw;
+    /* fond transparant */
+    background-color: transparent;
+
+}
+
+.contactDecorativeTitle {
+    justify-self: center;
+    align-items: center;
+    position: absolute;
+    z-index: -1;
+    background: red;
+
+
 }
 
 .mySelfParagraph {
