@@ -52,9 +52,11 @@ function App() {
       <div className='titleDiv'
         style={{
           textAlign: centerItem ? "center" : "left",
-
         }}>
-        <div className='pageTitle'>
+        <div className='pageTitle'
+          style={{
+            marginBottom: centerItem ? "" : "5vw",
+          }}>
           <h1 className='title'>ARTHUR</h1>
           <h1 className='title'>SIMONIN</h1>
         </div>
@@ -209,17 +211,39 @@ function App() {
 
         <h1 className='contactTitle'>Contact</h1>
 
-        <div className='contactDecorativeTitle'>
-          {getDecorativeTitleByNumber(9, "CONTACT", 3.5, "#E4DFD9", 10, 1, false, "alternate")}
-        </div>
-        <div style={{
-          border: "solid #E4DFD9 1px"
-        }}>
+        <div className="contactFormGroup">
 
+          {getDecorativeTitleByNumber(9, "CONTACT", 3.5, "#E4DFD9", 14, 1, false, "alternate")}
+
+          <div className="contactForm" style={{
+            border: "solid #E4DFD9 1px"
+          }}>
+            <h2 className='contactFormTitle'>Form</h2>
+            <div className="fields">
+              <form action="">
+                <label htmlFor="firstName">First Name</label><br />
+                <input type="text" id="firstName" name="firstName" /><br />
+                <label htmlFor="surname">Surname</label><br />
+                <input type="text" id="surname" name="surname" /><br />
+                <label htmlFor="email">Email</label><br />
+                <input type="email" id="email" name="email" /><br />
+                <label htmlFor="message">Message</label><br />
+                <div className="message">
+                  <textarea id="message" name="message"></textarea><br />
+                </div>
+                <div className="sendButton">
+
+
+                  <input type="submit" value="Submit" />
+
+
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/*TODO: Remplir le footer */}
       <footer>
         <div className='footer'
           style={{
@@ -364,7 +388,7 @@ function getDecorativeTitleByNumber(number, title, spacing, color, fontSize, mul
       </h1>
     )
   }
-  return <div className={title + "TitleContainer"} style={{
+  return <div className={title.toLowerCase() + "TitlesContainer"} style={{
     textAlign: "center",
     margin: "auto"
   }}>{titles}</div>
