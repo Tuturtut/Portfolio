@@ -213,7 +213,7 @@ function App() {
 
         <div className="contactFormGroup">
 
-          {getDecorativeTitleByNumber(9, "CONTACT", 3.5, "#E4DFD9", 14, 1, false, "alternate")}
+          {getDecorativeTitleByNumber(9, "CONTACT", 3.5, "#E4DFD9", 10, 1, false, "alternate")}
 
           <div className="contactForm" style={{
             border: "solid #E4DFD9 1px"

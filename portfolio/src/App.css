@@ -1,3 +1,5 @@
+/* TODO: RENDRE PLUS PETIT */
+
 body,
 html,
 #root {
@@ -6,7 +8,8 @@ html,
 
 :root {
     --arrows_spacing: 2vw;
-    --titlesSize: calc(10px + 5.5vw)
+    --titlesSize: calc(10px + 5.5vw);
+    --widthmin: calc(min(600px, 50vw));
 }
 
 body {
@@ -23,6 +26,7 @@ body {
     overflow: hidden;
     padding: 1vw;
     z-index: -2;
+
 }
 
 h1 {
@@ -161,37 +165,41 @@ p {
 
 .contactFormGroup {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
     margin-bottom: 10vw;
 }
 
 .contactForm {
     position: absolute;
     z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 70%;
-    height: 84%;
-    background-color: rgba(0, 0, 0, 0.98);
+    width: var(--widthmin);
+
+    background-color: rgba(0, 0, 0, 0.96);
     top: 8%;
-    left: 15%;
     border-radius: 10px;
     border: 2px solid #E4DFD9;
     padding: 2vw 6vw 2vw 6vw;
-    box-sizing: border-box;
 }
 
 /* le titre 2 de la div contactForm */
 .contactFormTitle {
     color: #E4DFD9;
     font-size: 7vw;
-    margin-bottom: 10vw;
+    margin-bottom: 5vw;
 }
 
 .contactTitlesContainer {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
     z-index: 0;
     background-color: black;
+    align-items: center;
 }
 
 .fields {
@@ -209,8 +217,13 @@ input {
     color: #E4DFD9;
 }
 
+label {
+    font-size: 1.5vw;
+}
+
 input[type=text],
 input[type=email] {
+    font-size: 1vw;
     border: 2px solid rgba(0, 0, 0, 0);
     border-bottom: 2px #E4DFD9 solid;
     background-color: rgba(0, 0, 0, 0);
@@ -218,16 +231,11 @@ input[type=email] {
     height: 2vw;
 }
 
-.message {
-    height: 50%;
-    margin-bottom: 6vw;
-}
 
 
 
 textarea {
     border: 2px solid #E4DFD9;
-    border-radius: 10px;
     color: #E4DFD9;
     background-color: rgba(0, 0, 0, 1);
     resize: none;
@@ -239,7 +247,7 @@ textarea {
 
 input[type=text]:focus,
 input[type=email]:focus {
-    border: 1vw #E4DFD9 solid;
+    border: 2px #E4DFD9 solid;
 }
 
 .sendArrow {}
