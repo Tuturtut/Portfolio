@@ -164,8 +164,6 @@ p {
 .contact {}
 
 .contactFormGroup {
-    position: relative;
-    display: flex;
     flex-direction: column;
     background-color: black;
     align-items: center;
@@ -173,13 +171,17 @@ p {
 }
 
 .contactForm {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     z-index: 1;
     width: var(--widthmin);
-
+    justify-content: center;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.96);
-    top: 8%;
     border-radius: 10px;
+    /* center from contact */
+
     border: 2px solid #E4DFD9;
     padding: 2vw 6vw 2vw 6vw;
 }
@@ -189,6 +191,7 @@ p {
     color: #E4DFD9;
     font-size: 7vw;
     margin-bottom: 5vw;
+    justify-self: center;
 }
 
 .contactTitlesContainer {
@@ -198,6 +201,8 @@ p {
     width: 100%;
     height: 100%;
     z-index: 0;
+    left: 0;
+    top: 0;
     background-color: black;
     align-items: center;
 }
