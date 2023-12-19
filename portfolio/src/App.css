@@ -51,6 +51,7 @@ p {
     font-family: Franie Test;
     font-weight: 100;
     color: #E4DFD9;
+    font-size: 1.4vw;
 }
 
 .title {
@@ -178,10 +179,10 @@ p {
     width: var(--widthmin);
     justify-content: center;
     align-items: center;
+    justify-self: center;
     background-color: rgba(0, 0, 0, 0.96);
     border-radius: 10px;
     /* center from contact */
-
     border: 2px solid #E4DFD9;
     padding: 2vw 6vw 2vw 6vw;
 }
@@ -201,8 +202,6 @@ p {
     width: 100%;
     height: 100%;
     z-index: 0;
-    left: 0;
-    top: 0;
     background-color: black;
     align-items: center;
 }
@@ -285,8 +284,8 @@ input[type=email]:focus {
 .details {
     display: flex;
     align-items: center;
-    font-size: 2vw;
-    height: 10vw;
+    font-size: 1.3vw;
+    height: 5vw;
 }
 
 .detailsLines {
@@ -299,12 +298,12 @@ input[type=email]:focus {
 }
 
 .contactDetailsSvg {
-    width: 6vw;
+    width: 2.5vw;
 }
 
 .footerDiv {
     border: 2px solid #E4DFD9;
-    border-radius: 10px;
+    border-radius: 25px;
     padding: 2vw;
 }
 

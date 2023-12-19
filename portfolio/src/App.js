@@ -257,7 +257,7 @@ function App() {
             }}>
 
             <p style={{
-              fontSize: centerItem ? '2.5vw' : '1.5vw',
+              fontSize: centerItem ? '2vw' : '1vw',
               paddingLeft: centerItem ? '8vw' : 0,
               paddingRight: centerItem ? '8vw' : 0
             }}>
